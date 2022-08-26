@@ -19,24 +19,34 @@
  * You should use an if-else-if-else block to return different messages.
  *
  * Test your function by passing various string literals to it and
- * console.logging the function's return value
+ * console.loggingthe function's return value
  */
 
-var colorPreference = prompt("what is your favorite color?");
-
-function analyzeColor(color){
-    if (colorPreference === "blue") {
+function analyzeColor(x) {
+    if (x === "blue") {
         alert("That is my favorite!");
-    } else if (colorPreference === "red") {
+    } else if (x === "red") {
         alert("Red is ok...");
+    } else if (x === "green") {
+        alert("like the Earth!");
+    } else if (x === "violet") {
+        alert("just like Liz's eyes");
+    } else if (x === "orange") {
+        alert("like the fruit!");
+    } else if (x === "yellow") {
+        alert("like the sun!");
+    } else if (x === "indigo") {
+        alert("I like indigo");
+    } else if (isNaN(x) === false) {
+        alert("that is not a color!");
     } else {
-        alert(colorPreference+ ", that is not my favorite, but I like it for you!");
+        alert(x+ ", that is not my favorite, but I like it for you!");
     }
 }
-analyzeColor(colorPreference);
-analyzeColor('blue');
 analyzeColor(3);
-
+analyzeColor('blue');
+var colorPreference = prompt("what is your favorite color?");
+analyzeColor(colorPreference);
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -50,6 +60,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+console.log(randomColor);
+analyzeColor(randomColor);
 
 /**
  * TODO:
