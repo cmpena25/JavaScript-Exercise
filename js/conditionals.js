@@ -69,6 +69,37 @@ analyzeColor(randomColor);
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
+function analyzeColorSwitch(x){
+    switch(x) {
+        case "blue":
+            alert("What a coincidence, that's my favorite!");
+            break;
+        case "red":
+            alert("Really? Red is ok...");
+            break;
+        case "green":
+            alert("Like the grass!");
+            break;
+        case"violet":
+            alert("violet bent backwards over the grass");
+            break;
+        case "yellow":
+            alert("like the sun!");
+            break;
+        case "orange":
+            alert("I like that fruit!");
+            break;
+        case "indigo":
+            alert("indigo blue?");
+        case isNaN(x) === false:
+            alert("Hey that is not a number!");
+            break;
+    }
+}
+
+analyzeColorSwitch('red');
+
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
