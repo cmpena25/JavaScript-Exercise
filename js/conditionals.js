@@ -108,6 +108,9 @@ analyzeColorSwitch('red');
  */
 
 /* ########################################################################## */
+var userColor = prompt("Pick a color.");
+analyzeColorSwitch(userColor);
+
 
 /**
  * TODO:
@@ -128,6 +131,26 @@ analyzeColorSwitch('red');
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(x, y){
+    switch(x) {
+        case 1:
+            alert(y- (y * .10));
+            break;
+        case 2:
+            alert(y- (y *.25));
+            break;
+        case 3:
+            alert(y- (y * .35));
+            break;
+        case 4:
+            alert(y- (y * .50 ));
+            break;
+        case 5:
+            alert(y-y);
+            break;
+    }
+}
+calculateTotal(2,100);
 
 /**
  * TODO:
