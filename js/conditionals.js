@@ -134,7 +134,7 @@ analyzeColorSwitch(userColor);
 function calculateTotal(x, y){
     switch(x) {
         case 1:
-            alert(y- (y * .10));
+            alert("your luck number is:" + luckyNumber + "and your total discount applied is" + y- (y * .10));
             break;
         case 2:
             alert(y- (y *.25));
@@ -146,7 +146,7 @@ function calculateTotal(x, y){
             alert(y- (y * .50 ));
             break;
         case 5:
-            alert(y-y);
+            alert('free');
             break;
     }
 }
@@ -161,7 +161,14 @@ calculateTotal(2,100);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var userTotal = prompt("How much is your total bill?");
+calculateTotal(luckyNumber, userTotal);
+
+
+
+
 
 /**
  * TODO:
@@ -181,3 +188,28 @@ calculateTotal(2,100);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var trueFalse = confirm("would you like to put a number in?");
+
+if (trueFalse === true) {
+    var userInput = prompt("Yay, pick a number.");
+    if (isNaN(userInput) === false) {
+        if (userInput % 2 === 0) {
+            alert(userInput + ", your number is even!");
+            alert(parseInt(userInput) + 100);
+        } else {
+           alert(userInput + ", your number is odd!");
+           alert(parseInt(userInput) +100);
+        }
+    } else {
+        alert("hey that is not a number");
+    }
+} else {
+    alert("Goodbye!");
+}
+
+
+
+
+
+
